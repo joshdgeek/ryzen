@@ -238,10 +238,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                             <p
                                 class="mt-0.5
-                                       text-base
+                                       text-[13px]
                                        font-black"
                             >
-                                ${formatNaira(product.amount * 1400)}
+                                ${formatNaira(product.amount * 1310)} - ${formatNaira(product.amount * 1350)}
                             </p>
 
                         </div>

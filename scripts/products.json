@@ -56,6 +56,28 @@
             "image_href": "https://imgproxy.eneba.games/VanEi1X9iQNSzT1cAannLWcfhURDLZmVFq_1Ca5eEkw/rs:fit:300/ar:1/czM6Ly9wcm9kdWN0/cy5lbmViYS5nYW1l/cy9wcm9kdWN0cy9o/N1ctNDF5cXNYbnhp/eTB4Qmt2bG5OQ2NK/QjBYRzUyMHQtUzhz/bE51TXJrLmpwZw"
         },
         {
+            "id": "psn-us-50",
+            "platform": "PlayStation",
+            "type": "wallet",
+            "title": "PlayStation Store Gift Card $50",
+            "amount": 50,
+            "currency": "USD",
+            "region": "US",
+            "href": "https://www.eneba.com/psn-playstation-network-card-50-usd-usa-psn-key-united-states",
+            "image_href": "https://imgproxy.eneba.games/VanEi1X9iQNSzT1cAannLWcfhURDLZmVFq_1Ca5eEkw/rs:fit:300/ar:1/czM6Ly9wcm9kdWN0/cy5lbmViYS5nYW1l/cy9wcm9kdWN0cy9o/N1ctNDF5cXNYbnhp/eTB4Qmt2bG5OQ2NK/QjBYRzUyMHQtUzhz/bE51TXJrLmpwZw"
+        },
+        {
+            "id": "psn-us-100",
+            "platform": "PlayStation",
+            "type": "wallet",
+            "title": "PlayStation Store Gift Card $100",
+            "amount": 100,
+            "currency": "USD",
+            "region": "US",
+            "href": "https://www.eneba.com/psn-playstation-network-card-100-usd-usa-psn-key-united-states",
+            "image_href": "https://imgproxy.eneba.games/VanEi1X9iQNSzT1cAannLWcfhURDLZmVFq_1Ca5eEkw/rs:fit:300/ar:1/czM6Ly9wcm9kdWN0/cy5lbmViYS5nYW1l/cy9wcm9kdWN0cy9o/N1ctNDF5cXNYbnhp/eTB4Qmt2bG5OQ2NK/QjBYRzUyMHQtUzhz/bE51TXJrLmpwZw"
+        },
+        {
             "id": "steam-uk-1",
             "platform": "Steam",
             "type": "wallet",
