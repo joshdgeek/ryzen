@@ -117,6 +117,29 @@ function renderEnebaGuide() {
 
                         <div>
                             <h3 class="font-semibold text-gray-900">
+                                Keep proceeding to checkout and use the OPAY payment option
+                            </h3>
+
+                            <p class="mt-1 text-sm text-gray-600">
+                                After completing your purchase, open
+                                <strong> Key Library</strong> on Eneba to reveal
+                                your key.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex gap-4">
+
+                        <div class="flex-shrink-0 flex items-center justify-center
+                                    w-8 h-8 rounded-full bg-gray-900 text-white
+                                    text-sm font-bold">
+                            4
+                        </div>
+
+                        <div>
+                            <h3 class="font-semibold text-gray-900">
                                 Check your Eneba Library
                             </h3>
 
@@ -128,6 +151,8 @@ function renderEnebaGuide() {
                         </div>
 
                     </div>
+
+
 
                 </div>
 
