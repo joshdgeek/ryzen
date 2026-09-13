@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                        text-[13px]
                                        font-black"
                             >
-                                ${formatNaira(product.amount * 1310)} - ${formatNaira(product.amount * 1350)}
+                                ${formatNaira(product.amount * 1310)} - ${formatNaira(product.amount * 1450)}
                             </p>
 
                         </div>
