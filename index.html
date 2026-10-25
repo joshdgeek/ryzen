@@ -11,6 +11,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="scripts/product.js" defer></script>
     <script src="scripts/guide.js" defer></script>
+    <script src="scripts/toggleCurrency.js" defer></script>
 
     <!-- Optional: Tailwind configuration -->
     <script>
@@ -349,27 +350,28 @@
             </div>
 
 
-            <!-- Search -->
+            <!-- Currency -->
 
-            <div class="relative w-full
-                    sm:w-72">
+            <div class="relative w-full sm:w-72">
+                <div class="flex items-center justify-between rounded-xl
+                border border-white/10 bg-white/[0.03] p-1.5">
 
-                <i data-lucide="search" class="absolute left-3 top-1/2
-                      h-4 w-4
-                      -translate-y-1/2
-                      text-gray-600">
-                </i>
+                    <span class="pl-2 text-sm text-gray-400">Currency</span>
 
-                <input type="text" placeholder="Search gift cards..." class="w-full rounded-xl
-                       border border-white/10
-                       bg-white/[0.03]
-                       py-3 pl-10 pr-4
-                       text-sm text-white
-                       outline-none
-                       placeholder:text-gray-600
-                       focus:border-indigo-500/50">
+                    <div class="flex rounded-lg bg-black/30 p-1">
+                        <button type="button" id="currencyusd" class="rounded-md bg-indigo-500 px-4 py-2
+                       text-sm font-medium text-white transition">
+                            USD $
+                        </button>
 
+                        <button type="button" id="currencygbp" class="rounded-md px-4 py-2
+                       text-sm font-medium text-gray-400 transition">
+                            UK-GBP £
+                        </button>
+                    </div>
+                </div>
             </div>
+
 
         </div>
 

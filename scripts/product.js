@@ -1,6 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    //currency buttons
+    const usd = document.getElementById("currencyusd");
+    const gbp = document.getElementById("currencygbp");
+
+    let currency = localStorage.getItem("currency") || "USD";
+
+
+
+
+
+
     const productGrid = document.getElementById("product-grid");
+
 
     const categoryButtons =
         document.querySelectorAll(".category-btn");
@@ -79,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
     /*
     ============================================================
     PRODUCT TYPE LABEL
@@ -106,6 +117,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    //set currency to USD if not already set
+    function setCurrency(newCurrency) {
+        currency = newCurrency;
+        localStorage.setItem("currency", currency);
+        console.log("Currency set to:", currency);
+        return currency;
+    }
 
     /*
     ============================================================
@@ -241,7 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                        text-[13px]
                                        font-black"
                             >
-                                ${formatNaira(product.amount * 1310)} - ${formatNaira(product.amount * 1450)}
+                                ${(product.amount).toLocaleString()} ${(product.currency)}
                             </p>
 
                         </div>
@@ -291,6 +309,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function renderProducts(productList) {
 
+
         if (!productList.length) {
 
             productGrid.innerHTML = `
@@ -337,6 +356,7 @@ document.addEventListener("DOMContentLoaded", () => {
     */
 
     function renderByCategory(category) {
+        let currentCurrency = localStorage.getItem("currency") || "USD";
 
         if (category === "all") {
 
@@ -351,13 +371,40 @@ document.addEventListener("DOMContentLoaded", () => {
         const filteredProducts =
             products.filter(product =>
                 product.platform.toLowerCase() ===
-                category.toLowerCase()
+                category.toLowerCase() && product.currency === currentCurrency
             );
-
 
         renderProducts(filteredProducts);
 
     }
+
+
+    //render after currency change
+    function setCurrency(newCurrency) {
+        currency = newCurrency;
+        localStorage.setItem("currency", currency);
+
+        console.log("Currency set to:", currency);
+
+
+        // Update the active button styling
+        usd.classList.toggle("bg-indigo-500", currency === "USD");
+        usd.classList.toggle("text-white", currency === "USD");
+        usd.classList.toggle("text-gray-400", currency !== "USD");
+
+        gbp.classList.toggle("bg-indigo-500", currency === "GBP");
+        gbp.classList.toggle("text-white", currency === "GBP");
+        gbp.classList.toggle("text-gray-400", currency !== "GBP");
+
+        let category = localStorage.getItem("selectedCategory") || "all";
+
+        //refresh products based on the selected category and new currency
+        renderByCategory(category);
+    }
+
+    // Listen for clicks
+    usd.addEventListener("click", () => setCurrency("USD"));
+    gbp.addEventListener("click", () => setCurrency("GBP"));
 
 
     /*
@@ -374,6 +421,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 button.dataset.category;
             console.log(
                 "Category selected:",
+                category
+            );
+
+            //set to local storage
+            localStorage.setItem(
+                "selectedCategory",
                 category
             );
 
@@ -516,3 +569,4 @@ document.addEventListener("DOMContentLoaded", () => {
     loadProducts();
 
 });
+

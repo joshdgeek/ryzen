@@ -117,7 +117,7 @@ function renderEnebaGuide() {
 
                         <div>
                             <h3 class="font-semibold text-gray-900">
-                                Keep proceeding to checkout and use the OPAY payment option
+                                Proceed to checkout and use the OPAY payment option
                             </h3>
 
                             <p class="mt-1 text-sm text-gray-600">
